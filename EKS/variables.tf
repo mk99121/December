@@ -48,3 +48,8 @@ variable "database_subnet_tags" {
       "Name" = "vpc-demo"
     }
 }*/
+##############################################
+variable "cluster-name" {
+  type = string
+  default = "EKS_TF_Cluster"
+}
