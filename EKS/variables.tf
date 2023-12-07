@@ -53,3 +53,7 @@ variable "cluster-name" {
   type = string
   default = "EKS_TF_Cluster"
 }
+variable "cluster-version" {
+  type = string
+  default = "1.25"
+}
