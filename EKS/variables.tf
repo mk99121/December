@@ -57,3 +57,24 @@ variable "cluster-version" {
   type = string
   default = "1.25"
 }
+variable "node-group" {
+  type = string
+  default = "eks-cluster-nodegroup"
+  
+}
+variable "ami_type" {
+  type = string
+  default = "AL2_x86_64"
+}
+variable "disk_size" {
+  type = string
+  default = "20"
+}
+variable "instance_type" {
+  type = list(string)
+  default = ["t3.medium"]
+}
+variable "capacity_type" {
+  type = string
+  default = "ON_DEMAND"
+}

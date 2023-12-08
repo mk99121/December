@@ -4,7 +4,7 @@ resource "aws_eks_cluster" "eks-cluster" {
   version = var.cluster-version
 
   vpc_config {
-    subnet_ids = module.vpc.public_subnets
+    subnet_ids = module.vpc.private_subnets
     endpoint_private_access = true
     #endpoint_public_access  = false
   }
@@ -17,6 +17,6 @@ resource "aws_eks_cluster" "eks-cluster" {
   ]
 
 #Enable EKS cluster control plane Logging
-enabled_cluster_log_types = ["api", "audit"]
+enabled_cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 
 }
