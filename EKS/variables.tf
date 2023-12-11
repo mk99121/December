@@ -72,9 +72,18 @@ variable "disk_size" {
 }
 variable "instance_type" {
   type = list(string)
-  default = ["t3.medium"]
+  default = ["t2.micro"]
 }
 variable "capacity_type" {
   type = string
   default = "ON_DEMAND"
+}
+###############################
+variable "my_ip" {
+  type = string
+  default = "103.197.115.156"
+}
+variable "workstation-external-cidr" {
+  type = list(string)
+  default = [ "103.197.115.156/32" ]
 }
