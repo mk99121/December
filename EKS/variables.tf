@@ -80,10 +80,10 @@ variable "capacity_type" {
 }
 ###############################
 variable "my_ip" {
-  type = string
-  default = "103.197.115.156/32"
+  type = list(string)
+  default = [ "0.0.0.0/0" ]
 }
 variable "workstation-external-cidr" {
   type = list(string)
-  default = [ "103.197.115.156/32" ]
+  default = [ "0.0.0.0/0" ]
 }
