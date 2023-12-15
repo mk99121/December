@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: mydep
+spec:
+ replicas: 3  # replicas= desired count of pods of same  image to b created
+ selector: # query the cluster to see the current count of replicas
+  matchLabels:
+   type: webserver
+ template: # pod specification for the replicas
+  metadata:
+   labels: 
+    type: webserver
+  spec:
+   containers:
+    - name: c1
+      image: leaddevops/kubeserve:v1
